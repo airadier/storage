@@ -61,7 +61,9 @@ func GetObjectSliceDiff(os1 []Object, os2 []Object) ObjectSliceDiff {
 		for _, o2 := range os2 {
 			if o1.Path == o2.Path {
 				found = true
+				fmt.Printf("********** Comparing %s (%s) with %s (%s)\n", o1.Path, o2.Path, o1.LastModified, o2.LastModified)
 				if !o1.LastModified.Equal(o2.LastModified) {
+					fmt.Printf("!!!!!!! Not equal\n")
 					diff.Updated = append(diff.Updated, o2)
 				}
 				break

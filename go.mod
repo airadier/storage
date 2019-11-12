@@ -1,4 +1,4 @@
-module github.com/chartmuseum/storage
+module github.com/airadier/storage
 
 go 1.12
 
